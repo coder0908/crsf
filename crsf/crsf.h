@@ -167,7 +167,7 @@ bool crsf_pop_frame_queue(struct crsf_frame_queue *queue, struct crsf_frame *fra
 bool crsf_parse_frame(struct crsf_frame *frame, const uint8_t *buf, uint8_t buf_len, uint8_t *read_len);
 void crsf_parse_frames(struct crsf_frame_queue *queue, const uint8_t *buf, uint8_t buf_len, uint8_t *read_len);
 
-bool crsf_flush_rx(struct crsf_frame_queue *queue);
+bool crsf_flush_frmae_queue(struct crsf_frame_queue *queue);
 
 bool crsf_parse_gps(const struct crsf_frame *frame, struct crsf_gps *gps);
 bool crsf_parse_rc_channels(const struct crsf_frame *frame, struct crsf_rc_channels *rc_channels);
