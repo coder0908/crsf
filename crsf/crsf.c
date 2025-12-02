@@ -198,7 +198,7 @@ void crsf_parse_frames(struct crsf_frame_queue *queue, const uint8_t *buf, uint8
 }
 
 
-bool crsf_flush_rx(struct crsf_frame_queue *queue)
+bool crsf_flush_frmae_queue(struct crsf_frame_queue *queue)
 {
 	assert(queue);
 
