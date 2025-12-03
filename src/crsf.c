@@ -4,7 +4,6 @@
  *  Created on: Nov 13, 2025
  *      Author: coder0908
  */
-//hello
 
 #include "crsf.h"
 #include <assert.h>
@@ -440,15 +439,3 @@ void crsf_framing_temps(struct crsf_frame *frame, uint8_t temp_src_id, int16_t t
 
 	frame->crc = crsf_calc_crc8_frame(frame);
 }
-
-
-
-
-
-
-
-
-
-
-
-
