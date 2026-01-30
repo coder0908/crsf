@@ -244,7 +244,7 @@ bool crsf_parse_rate(const struct crsf_frame* frame, struct crsf_rate* rate);
 bool crsf_parse_accel(const struct crsf_frame* frame, struct crsf_accel* accel);
 
 void crsf_framing_gps(struct crsf_frame* frame, int32_t latitude_100ndeg, int32_t longitude_100ndeg,
-	uint16_t groundspeed_damph, uint16_t heading_cdeg, uint16_t alttude_m, uint8_t satellites);
+	uint16_t groundspeed_damph, uint16_t heading_cdeg, uint16_t altitude_m, uint8_t satellites);
 void crsf_framing_gps_ex(struct crsf_frame* frame, uint8_t fix_type, int16_t northward_velocity_cmps, int16_t eastward_velocity_cmps,
 	int16_t vertical_velocity_cmps, int16_t horizontal_velocity_accuracy_cmps, int16_t track_accuracy_deg, int16_t alt_ellipsoid_m,
 	int16_t horizontal_accuracy_cm, int16_t vertical_accuracy_cm, uint8_t horizontal_dop_deci, uint8_t vertical_dop_deci);
