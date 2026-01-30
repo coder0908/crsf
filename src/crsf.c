@@ -403,7 +403,7 @@ bool crsf_parse_temps(const struct crsf_frame* frame, struct crsf_temps* temps)
 
 
 void crsf_framing_gps(struct crsf_frame* frame, int32_t latitude_100ndeg, int32_t longitude_100ndeg,
-		uint16_t groundspeed_damph, uint16_t heading_cdeg, uint16_t alttude_m, uint8_t satellites)
+		uint16_t groundspeed_damph, uint16_t heading_cdeg, uint16_t altitude_m, uint8_t satellites)
 {
 	assert(frame);
 
@@ -417,7 +417,7 @@ void crsf_framing_gps(struct crsf_frame* frame, int32_t latitude_100ndeg, int32_
 	u32_to_buf_big_endian(payload + 4, longitude_100ndeg);
 	u16_to_buf_big_endian(payload + 8, groundspeed_damph);
 	u16_to_buf_big_endian(payload + 10, heading_cdeg);
-	u16_to_buf_big_endian(payload + 12, alttude_m + 1000);
+	u16_to_buf_big_endian(payload + 12, altitude_m + 1000);
 	payload[14] = satellites;
 
 	crsf_set_crc(frame, crsf_calc_crc8_frame(frame));
